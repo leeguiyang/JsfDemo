@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>书架</title>
+</h:head>
+<h:body>
+	<h:form>
+		书号：<h:inputText value="#{book.id}"/><br/>
+		书名：<h:inputText value="#{book.name}"/><br/>
+		价格：<h:inputText value="#{book.price}"/><br />
+		<h:commandButton type="submit" value="提交" action="#{bookPage.addBook(book)}"/>
+	</h:form>
+	<h:form>
+		<h:dataTable value="#{bookPage.bookList}" var="b">
+			<h:column>
+				<f:facet name="header">书号</f:facet>#{b.id}
+		</h:column>
+			<h:column>
+				<f:facet name="header">书名</f:facet>#{b.name}
+		</h:column>
+			<h:column>
+				<f:facet name="header">价格</f:facet>#{b.price}
+		</h:column>
+			<h:column>
+				<f:facet name="header">操作</f:facet>
+				<h:commandLink value="删除" action="#{bookPage.deleteBook(b)}"></h:commandLink>
+			</h:column>
+		</h:dataTable>
+	</h:form>
+</h:body>
+</html>

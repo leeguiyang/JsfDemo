@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
+    version="2.1">
+<!-- 这个文件哪怕里面什么都没有也必须存在于我们的jar/war中， 否则，我们的Java注解将不会被扫描！ -->
+</faces-config>
